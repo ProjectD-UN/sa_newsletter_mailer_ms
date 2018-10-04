@@ -18,17 +18,24 @@ class NewslettersController < ApplicationController
     @newsletter = Newsletter.new(newsletter_params)
 
     if @newsletter.save
+      @topics=params[:topics]
+      @topics.each do |this_topic| 
+        NewsletterTopic.create(:newsletter_id => @newsletter.id, :topic_id => this_topic)
+      end
       render json: @newsletter, status: :created, location: @newsletter
     else
       render json: @newsletter.errors, status: :unprocessable_entity
     end
+    
 
+    
     create_newsletter = CreateNewsletter.new
 
     create_newsletter.subscribe(UserAlerter.new)
-    #create_newsletter.subscribe(NewsItemGenerator.new)
-
+       
     create_newsletter.call(@newsletter.id,params[:topics])
+
+
   end
 
   # PATCH/PUT /newsletters/1

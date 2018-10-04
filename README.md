@@ -1,24 +1,6 @@
-# README
+# Microservicio Mailer de boletines - Universida Nacional
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este es un microservicio desarrolla en ruby on rails
 
-Things you may want to cover:
+Version ruby '2.5.1'
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
