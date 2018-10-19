@@ -11,5 +11,5 @@ COPY Gemfile /sa_newsletter_mailer_ms/Gemfile
 COPY Gemfile.lock /sa_newsletter_mailer_ms/Gemfile.lock
 
 RUN bundle install
-RUN DB_ADAPTER=nulldb bundle exec rake assets:precompile
+
 
